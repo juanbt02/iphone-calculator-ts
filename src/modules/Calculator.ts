@@ -41,6 +41,3 @@ class Calculator implements iCalculator{
 
 }
 
-let a: Calculator = new Calculator();
-
-a.showResult();
