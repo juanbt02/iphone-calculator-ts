@@ -1,3 +1,4 @@
+
 interface iCalculator{
 
     params: number[];
@@ -14,7 +15,9 @@ interface iCalculator{
 class Calculator implements iCalculator{
     params: number[];
 
-
+    constructor(){
+        this.params = [];
+    }
 
     addParams(): void {
         throw new Error("Method not implemented.");
@@ -33,7 +36,11 @@ class Calculator implements iCalculator{
         throw new Error("Method not implemented.");
     }
     showResult(): void {
-        throw new Error("Method not implemented.");
+        console.log("Hola mundo");
     }
 
 }
+
+let a: Calculator = new Calculator();
+
+a.showResult();
