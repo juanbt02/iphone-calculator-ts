@@ -1,43 +1,54 @@
 
 interface iCalculator{
 
-    params: number[];
+    numbers: number[];
+    operations: string[];
+    result: number;
     addParams(): void;
-    add(): number;
-    subtract(): number;
-    multiply(): number;
-    split(): number;
-    showResult(): void;
+    add(): void;
+    subtract(): void;
+    multiply(): void;
+    split(): void;
+    showResult(): number;
 
 }
 
 
 class Calculator implements iCalculator{
     params: number[];
+    operations: string[];
+    result: number;
 
     constructor(){
         this.params = [];
+        this.operations = [];
+        this.result = 0;
     }
 
     addParams(): void {
-        throw new Error("Method not implemented.");
+        
     }
 
-    add(): number {
-        throw new Error("Method not implemented.");
+    add(): void {
+        this.operations.push("+");
     }
-    subtract(): number {
-        throw new Error("Method not implemented.");
+    subtract(): void {
+        this.operations.push("-");
     }
-    multiply(): number {
-        throw new Error("Method not implemented.");
+    multiply(): void {
+        this.operations.push("x");
     }
-    split(): number {
-        throw new Error("Method not implemented.");
+    split(): void {
+        this.operations.push("/");
     }
-    showResult(): void {
-        console.log("Hola mundo");
+    showResult(): number {
+        console.log(this.result);
+        return -1;
     }
 
 }
+
+let a: Calculator = new Calculator();
+
+a.showResult();
 
